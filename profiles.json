@@ -1,73 +1,65 @@
-
 // To view the default settings, hold "alt" while clicking on the "Settings" button.
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
-
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-
-    "profiles":
-    {
-        "defaults":
-        {
+    "alwaysShowTabs": false,
+    "launchMode": "maximized",
+    "copyOnSelect": true,
+    "profiles": {
+        "defaults": {
             // Put settings here that you want to apply to all profiles
+            "acrylicOpacity": 0.8, // 设置背景透明度
+            "useAcrylic": true,
+            "cursorShape": "filledBox", // 光标形状
+            "fontFace": "Cascadia Code PL", // 字体
+            "fontSize": "18", // 字体大小,
+            "colorScheme": "lovelace" // 主题
         },
-        "list":
-        [
+        "list": [
             {
                 // Make changes here to the powershell.exe profile
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
-                "hidden": false,
-                "startingDirectory" : "./",
-                "fontSize" : 14
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "Windows PowerShell",
+                "tabTitle": "Windows PowerShell",
+                "backgroundImage": "C://data//niu.jpg",
+                "backgroundImageOpacity": 0.5,
+                "acrylicOpacity": 0.5, // 设置背景透明度
+                "useAcrylic": true
             },
             {
-                // Make changes here to the cmd.exe profile
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "name": "cmd",
                 "commandline": "cmd.exe",
-                "hidden": false,
-                "startingDirectory" : "./",
-                "fontSize" : 14
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "icon": "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
+                "name": "CMD",
+                "startingDirectory": "./"
             },
             {
                 "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
                 "hidden": false,
                 "name": "Ubuntu-18.04",
-                "source": "Windows.Terminal.Wsl"
+                "source": "Windows.Terminal.Wsl",
+                "colorScheme": "lovelace",
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "tabTitle": "Ubuntu-18.04",
+                "backgroundImage": "C://data//senling.jpg",
+                "backgroundImageOpacity": 0.5,
+                "acrylicOpacity": 0.5, // 设置背景透明度
+                "useAcrylic": true
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "acrylicOpacity" : 0.75,
-                // "background" : "#481036",
-                "closeOnExit" : true,
-                "colorScheme" : "Ubuntu",
-                "commandline" : "wsl.exe",
-                // "cursorColor" : "#C5C8C6",
-                "cursorShape" : "filledBox",
-                "fontFace" : "UbuntuMono Nerd Font Mono",
-                "fontSize" : 14,
-                "guid" : "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "historySize" : 9001,
-                "icon" : "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name" : "Ubuntu (WSL)",
-                "padding" : "0, 0, 0, 0",
-                "snapOnInput" : true,
-                "startingDirectory" : "~",
-                "tabTitle" : "Ubuntu (WSL)",
-                "useAcrylic" : true
             }
         ]
     },
-
     // Add custom color schemes to this array
     "schemes": [
         {
@@ -90,10 +82,239 @@
             "brightWhite": "#eeeeec",
             "background": "#300a24",
             "foreground": "#eeeeec"
-          }
+        },
+        {
+            "name": "lovelace",
+            "black": "#282a36",
+            "red": "#f37f97",
+            "green": "#5adecd",
+            "yellow": "#f2a272",
+            "blue": "#8897f4",
+            "purple": "#c574dd",
+            "cyan": "#79e6f3",
+            "white": "#fdfdfd",
+            "brightBlack": "#414458",
+            "brightRed": "#ff4971",
+            "brightGreen": "#18e3c8",
+            "brightYellow": "#ff8037",
+            "brightBlue": "#556fff",
+            "brightPurple": "#b043d1",
+            "brightCyan": "#3fdcee",
+            "brightWhite": "#bebec1",
+            "background": "#1d1f28",
+            "foreground": "#fdfdfd"
+        }
     ],
-
     // Add any keybinding overrides to this array.
     // To unbind a default keybinding, set the command to "unbound"
-    "keybindings": []
+    "keybindings": [
+        // 打卡新选项卡
+        {
+            "command": "newTab",
+            "keys": "f12"
+        },
+        // 打开PowerShell
+        {
+            "command": {
+                "action": "newTab",
+                "index": 0
+            },
+            "keys": "f1"
+        },
+        // 打开CMD
+        {
+            "command": {
+                "action": "newTab",
+                "index": 1
+            },
+            "keys": "f2"
+        },
+        // 打开wsl
+        {
+            "command": {
+                "action": "newTab",
+                "index": 2
+            },
+            "keys": "f3"
+        },
+        // 打开wsl快捷键
+        {
+            "command": {
+                "action": "newTab",
+                "index": 2
+            },
+            "keys": "ctrl+alt+t"
+        },
+        // 上下分屏
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "horizontal"
+            },
+            "keys": "ctrl+alt+h"
+        },
+        // 上下分屏，打开Powershell
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "horizontal",
+                "index": 0
+            },
+            "keys": "ctrl+shift+1"
+        },
+        // 上下分屏，打开CMD
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "horizontal",
+                "index": 1
+            },
+            "keys": "ctrl+shift+2"
+        },
+        // 上下分屏，打开wsl
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "horizontal",
+                "index": 2
+            },
+            "keys": "ctrl+shift+3"
+        },
+        // 左右分屏
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "vertical"
+            },
+            "keys": "ctrl+alt+v"
+        },
+        // 左右分屏，打开PowerShell
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "vertical",
+                "index": 0
+            },
+            "keys": "ctrl+alt+1"
+        },
+        // 左右分屏，打开CMD
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "vertical",
+                "index": 1
+            },
+            "keys": "ctrl+alt+2"
+        },
+        // 左右分屏，打开wsl
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "vertical",
+                "index": 2
+            },
+            "keys": "ctrl+alt+3"
+        },
+        // 左右分屏，打开wsl
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "vertical",
+                "index": 2
+            },
+            "keys": "ctrl+alt+n"
+        },
+        // 上下分屏，打开wsl
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "horizontal",
+                "index": 2
+            },
+            "keys": "ctrl+alt+o"
+        },
+        // 关闭当前分屏
+        {
+            "command": "closePane",
+            "keys": "ctrl+alt+/"
+        },
+        // 分屏后焦点移动
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+down"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "alt+left"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+right"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "alt+up"
+        },
+        // 分屏大小调整
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "keys": "ctrl+shift+down"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": "ctrl+shift+left"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "right"
+            },
+            "keys": "ctrl+shift+right"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "ctrl+shift+up"
+        },
+        // 向上滚动
+        {
+            "command": "scrollUp",
+            "keys": "shift+up"
+        },
+        // 向下滚动
+        {
+            "command": "scrollDown",
+            "keys": "shift+down"
+        },
+        // 向上翻页
+        {
+            "command": "scrollUpPage",
+            "keys": "shift+pgup"
+        },
+        // 向下翻页
+        {
+            "command": "scrollDownPage",
+            "keys": "shift+pgdn"
+        }
+    ]
 }
