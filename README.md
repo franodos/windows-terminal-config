@@ -23,6 +23,7 @@ Install-Module posh-git -Scope CurrentUser  # 集成git和PowerShell 的PowerShe
 Install-Module oh-my-posh -Scope CurrentUser  # oh-my-posh 是 Powershell 的快速主题引擎
 ```
 2. 设置Powerline主题
+使用编辑器打开PowerShell配置文件(如：notepad $PROFILE)，做如下配置：
 ```
 Import-Module posh-git
 Import-Module oh-my-posh
