@@ -24,7 +24,7 @@
                 "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
                 "name": "Windows PowerShell",
                 "tabTitle": "Windows PowerShell",
-                "backgroundImage": "C://data//niu.jpg",
+                "backgroundImage": "D://SoftwareData//terminal//senling.jpg",
                 "backgroundImageOpacity": 0.5,
                 "acrylicOpacity": 0.5, // 设置背景透明度
                 "useAcrylic": true
@@ -47,7 +47,7 @@
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
                 "tabTitle": "Ubuntu-18.04",
-                "backgroundImage": "C://data//senling.jpg",
+                "backgroundImage": "D://SoftwareData//terminal//senling.jpg",
                 "backgroundImageOpacity": 0.5,
                 "acrylicOpacity": 0.5, // 设置背景透明度
                 "useAcrylic": true
@@ -93,7 +93,7 @@
             "purple": "#c574dd",
             "cyan": "#79e6f3",
             "white": "#fdfdfd",
-            "brightBlack": "#414458",
+            "brightBlack": "#c79600",
             "brightRed": "#ff4971",
             "brightGreen": "#18e3c8",
             "brightYellow": "#ff8037",
