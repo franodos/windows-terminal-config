@@ -1,10 +1,7 @@
-// To view the default settings, hold "alt" while clicking on the "Settings" button.
-// For documentation on these settings, see: https://aka.ms/terminal-documentation
-{
-    "$schema": "https://aka.ms/terminal-profiles-schema",
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+chema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "alwaysShowTabs": false,
-    "launchMode": "maximized",
+    "launchMode": "default",
     "copyOnSelect": true,
     "profiles": {
         "defaults": {
@@ -12,19 +9,19 @@
             "acrylicOpacity": 0.8, // 设置背景透明度
             "useAcrylic": true,
             "cursorShape": "filledBox", // 光标形状
-            "fontFace": "Cascadia Code PL", // 字体
+            "fontFace": "DejaVu Sans Mono for Powerline", // 字体
             "fontSize": "18", // 字体大小,
             "colorScheme": "lovelace" // 主题
         },
         "list": [
             {
                 // Make changes here to the powershell.exe profile
-                "commandline": "powershell.exe",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "commandline": "pwsh.exe  -nologo",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "icon": "ms-appx:///ProfileIcons/{574e775e-4f2a-5b96-ac1e-a2962a402336}.png",
                 "name": "Windows PowerShell",
                 "tabTitle": "Windows PowerShell",
-                "backgroundImage": "D://SoftwareData//terminal//senling.jpg",
+                // "backgroundImage": "D://SoftwareData//terminal//senling.jpg",
                 "backgroundImageOpacity": 0.5,
                 "acrylicOpacity": 0.5, // 设置背景透明度
                 "useAcrylic": true
@@ -36,18 +33,16 @@
                 "name": "CMD",
                 "startingDirectory": "./"
             },
+
             {
-                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
-                "name": "Ubuntu-18.04",
+                "name": "Ubuntu-20.04",
                 "source": "Windows.Terminal.Wsl",
-                "colorScheme": "lovelace",
-                "historySize": 9001,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
-                "tabTitle": "Ubuntu-18.04",
-                "backgroundImage": "D://SoftwareData//terminal//senling.jpg",
+                "tabTitle": "Ubuntu-20.04",
+                // "backgroundImage": "D://SoftwareData//terminal//senling.jpg",
                 "backgroundImageOpacity": 0.5,
                 "acrylicOpacity": 0.5, // 设置背景透明度
                 "useAcrylic": true
